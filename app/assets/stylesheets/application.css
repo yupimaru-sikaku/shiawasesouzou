@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -13,3 +14,44 @@
  *= require_tree .
  *= require_self
  */
+/*** The new CSS Reset - version 1.0.0 (last updated 8.7.2021) ***/
+/* ブラウザのUAスタイルシートのすべてのスタイルを削除します、displayは除く */
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100&display=swap");
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+  all: unset;
+  display: revert;
+}
+
+/* box-sizingの優先値 */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* リストのスタイル（箇条書き・番号）を削除します */
+ol,
+ul {
+  list-style: none;
+}
+
+/* 画像がコンテナを超えないようにするため */
+img {
+  max-width: 100%;
+}
+
+/* テーブルのセル間のスペースを削除します */
+table {
+  border-collapse: collapse;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+* {
+  font-family: "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "ヒラギノ角ゴ Pro W3", "メイリオ", Meiryo, sans-serif;
+  letter-spacing: 2px;
+}
+/*# sourceMappingURL=application.css.map */
