@@ -1,4 +1,29 @@
 @charset "UTF-8";
+@-webkit-keyframes tooltipShow {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes tooltipShow {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 @media screen and (max-width: 750px) {
   .header_sm {
     width: 100vw;
@@ -24,7 +49,7 @@
     right: 15px;
     cursor: pointer;
     text-align: center;
-    z-index: 3;
+    z-index: 200;
   }
   .hamburger span {
     display: none;
@@ -70,23 +95,22 @@
   nav.globalMenuSp {
     background-image: -webkit-gradient(linear, left bottom, left top, from(#4481eb), to(#04befe));
     background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
-    display: none;
-    position: absolute;
     padding-top: 56px;
-    top: 0;
-    left: 0;
     color: #fff;
     text-align: center;
-    width: 100%;
-    height: 100vh;
-    -webkit-transition: all 2s;
-    transition: all 2s;
-    opacity: 0;
+    display: none;
     /* このクラスを、jQueryで付与・削除する */
   }
   nav.globalMenuSp.active {
-    opacity: 100;
     display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    -webkit-animation: tooltipShow 0.1s linear 0s;
+            animation: tooltipShow 0.1s linear 0s;
   }
   nav.globalMenuSp ul {
     margin: 0 auto;
