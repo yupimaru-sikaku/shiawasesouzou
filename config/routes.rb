@@ -1,9 +1,30 @@
 Rails.application.routes.draw do
-
-  root to: 'homes#index'
   
+  # devise_for :users
+  root to: 'homes#index'
+
+  # エンドユーザー
+  devise_for :users, controllers: {
+    sessions:      'users/sessions',
+    passwords:     'users/passwords',
+    registrations: 'users/registrations',
+  }
+
   # ホーム画面
-  resources :homes
+  resources :homes do
+    collection do
+      get "concept"
+      get "admission_guidance"
+    end
+  end
+  
+  # お問い合わせ
+  resources :contacts, only: [:new, :create] do
+    collection do
+      get "contanct_confirm"
+      get "contanct_complete"
+    end
+  end
 
 end
 
@@ -11,6 +32,7 @@ end
 
 # Rails.application.routes.draw do
 
+  # devise_for :users
 #   resources :cards
 #   root to: 'homes#index'
   
@@ -62,12 +84,6 @@ end
 #   # カード情報作成
 #   resources :cards, only: [:new, :create]
   
-#   # お問い合わせ
-#   resources :contacts, only: [:new, :create] do
-#     collection do
-#       get 'contanct_complete'
-#     end
-#   end
 
 #   resources :pdfs do
 #     collection do

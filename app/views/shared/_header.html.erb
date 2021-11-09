@@ -1,0 +1,24 @@
+<%##レスポンス（PC）%>
+<%##レスポンス（スマホ）%>
+<div class="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
+  <p>menu</p>
+</div>
+
+<nav class="header_sm">
+  <a href="/"><%= image_tag "logo.png", alt: "ロゴ画像" %></a>
+</nav>
+
+<nav class="globalMenuSp">
+    <ul>
+        <li><i class="fas fa-sign-in-alt"></i></i><%= link_to "幸せのコンセプト", "/" %></li>
+        <li><i class="fas fa-gifts"></i><%= link_to "入会案内", admission_guidance_homes_path %></li>
+        <li><i class="fas fa-gifts"></i><%= link_to "平等学とは", "/" %></li>
+        <li><i class="fas fa-gifts"></i><%= link_to "伝道師の役割", "/" %></li>
+        <li><i class="fas fa-headset"></i><%= link_to "お問い合わせ", new_contact_path %></li>
+    </ul>
+</nav>
+
+<%= javascript_pack_tag "shared/header" %>

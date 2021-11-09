@@ -1,0 +1,96 @@
+.home_content .home_concept {
+  display: -ms-grid;
+  display: grid;
+  grid-template: " ... concept_title_1 ... " " ... ............... ... " 20px " ... concept_words_1 ... " " ... concept_title_2 ... " " ... concept_words_2 ... " " ... ............... ... " 20px / 20px auto 20px;
+}
+
+.home_content .home_concept h1 {
+  font-size: 24px;
+  color: #3269f5;
+  font-weight: bold;
+  grid-area: concept_title_1;
+}
+
+.home_content .home_concept h3.concept_title_2 {
+  font-size: 18px;
+  color: #3269f5;
+  grid-area: concept_title_2;
+  font-weight: bold;
+}
+
+.home_content .home_concept p {
+  font-size: 14px;
+  grid-area: concept_words_1;
+}
+
+.home_content .home_concept p.concept_words_2 {
+  grid-area: concept_words_2;
+}
+
+.home_content .home_happy_definition {
+  padding: 0px 20px;
+}
+
+.home_content .home_happy_definition span.home_happy_definition_title_eng {
+  display: block;
+  font-size: 12px;
+  color: #3269f5;
+  border-top: 3px solid #3269f5;
+  padding-top: 5px;
+}
+
+.home_content .home_happy_definition p {
+  font-size: 14px;
+}
+
+.home_content .home_happy_definition p.hachidori_words {
+  color: #a3a3a3;
+}
+
+.home_content .home_happy_definition p.home_happy_definition_author {
+  text-align: end;
+}
+
+.home_content .home_happy_definition span.hachidori_words {
+  color: #3269f5;
+  font-size: 24px;
+}
+
+.home_content .home_happy_definition h2 {
+  font-size: 24px;
+}
+
+.home_content .home_happy_definition h2.hachidori {
+  color: #3269f5;
+  font-weight: bold;
+}
+
+.home_content .home_happy_definition .home_happy_definition_section {
+  border-top: 1px solid #ffc800;
+}
+
+.home_content .home_happy_definition .home_happy_definition_section span {
+  display: block;
+  width: 30px;
+  background-color: #ffc800;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  border-radius: 0px 0px 10px 0px;
+}
+
+.home_content .home_happy_definition .home_happy_definition_section p {
+  padding: 20px;
+}
+
+.home_content .home_happy_definition a.registration_link {
+  display: block;
+  text-align: center;
+  background-color: #ffd814;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(213, 217, 217, 0.5);
+          box-shadow: 0 2px 5px 0 rgba(213, 217, 217, 0.5);
+  border-radius: 4px;
+  padding: 5px 5px;
+  color: white;
+}
+/*# sourceMappingURL=index.css.map */

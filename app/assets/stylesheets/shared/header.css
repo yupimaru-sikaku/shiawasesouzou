@@ -1,109 +1,61 @@
 @charset "UTF-8";
-.header_sm {
-  display: none;
-}
-
-.hamburger {
-  display: none;
-}
-
-.globalMenuSp {
-  display: none;
-}
-
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  line-height: 65px;
-  padding: 8px 205px;
-  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.05);
-          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.05);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  background-color: white;
-  z-index: 1;
-}
-
-.header .header_logo {
-  font-size: 40px;
-  color: #000000e6;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
-
-.header .header_menus {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.header .header_menus .header_menu {
-  padding: 0px 25px;
-  font-family: "M PLUS Rounded 1c";
-}
-
 @media screen and (max-width: 750px) {
   .header {
     display: none;
   }
   .header_sm {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100vw;
-    line-height: 50px;
+    height: 60px;
     padding: 8px 0px;
-    -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.05);
-            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.05);
-    background-color: white;
-    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .header_sm .header_logo {
-    text-align: center;
-    font-size: 32px;
-    color: #000000e6;
-    font-family: "Noto Sans JP", sans-serif;
+  .header_sm img {
+    width: 230px;
+    display: block;
   }
   /*　ハンバーガーボタン　*/
   .hamburger {
     display: block;
     position: fixed;
-    z-index: 3;
-    left: 13px;
-    top: 12px;
-    width: 42px;
-    height: 42px;
+    top: 15px;
+    right: 15px;
     cursor: pointer;
     text-align: center;
     z-index: 3;
   }
   .hamburger span {
-    display: block;
+    display: none;
     position: absolute;
     width: 30px;
     height: 2px;
+    border-radius: 20%;
     left: 6px;
     background: #555;
     -webkit-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
   }
-  .hamburger span:nth-child(1) {
-    top: 10px;
-  }
-  .hamburger span:nth-child(2) {
-    top: 20px;
-  }
-  .hamburger span:nth-child(3) {
-    top: 30px;
+  .hamburger p {
+    font-size: 12px;
+    background-color: #3269f5;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
   /* ナビ開いてる時のボタン */
+  .hamburger.active {
+    right: 50px;
+  }
+  .hamburger.active p {
+    display: none;
+  }
   .hamburger.active span:nth-child(1) {
+    display: block;
     top: 16px;
     left: 6px;
     background: #fff;
@@ -112,19 +64,20 @@
   }
   .hamburger.active span:nth-child(2),
   .hamburger.active span:nth-child(3) {
+    display: block;
     top: 16px;
     background: #fff;
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
   }
   nav.globalMenuSp {
+    display: none;
     position: fixed;
     padding-top: 56px;
-    z-index: 2;
     top: 0;
     left: 0;
     color: #fff;
-    background: rgba(0, 0, 0, 0.9);
+    background: #4d05e8;
     text-align: center;
     width: 100%;
     height: 100vh;
@@ -148,7 +101,7 @@
     padding-bottom: 0;
   }
   nav.globalMenuSp ul li:hover {
-    background: #ddd;
+    background: #99abe9;
   }
   nav.globalMenuSp ul li a {
     display: inline-block;

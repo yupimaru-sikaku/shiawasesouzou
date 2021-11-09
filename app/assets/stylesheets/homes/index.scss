@@ -1,0 +1,90 @@
+@import "../font";
+
+.home_content {
+  .home_concept {
+    display: grid;
+    grid-template:
+      " ... concept_title_1 ... "
+      " ... ............... ... " 20px
+      " ... concept_words_1 ... "
+      " ... concept_title_2 ... "
+      " ... concept_words_2 ... "
+      " ... ............... ... " 20px
+      / 20px auto 20px;
+
+    h1 {
+      font-size: $sm_main;
+      color: #3269f5;
+      font-weight: bold;
+      grid-area: concept_title_1;
+    }
+    h3.concept_title_2 {
+      font-size: $sm_sub + 4px;
+      color: #3269f5;
+      grid-area: concept_title_2;
+      font-weight: bold;
+    }
+    p {
+      font-size: $sm_sub;
+      grid-area: concept_words_1;
+    }
+    p.concept_words_2 {
+      grid-area: concept_words_2;
+    }
+  }
+
+  .home_happy_definition {
+    padding: 0px 20px;
+    span.home_happy_definition_title_eng {
+      display: block;
+      font-size: $sm_subsub;
+      color: #3269f5;
+      border-top: 3px solid #3269f5;
+      padding-top: 5px;
+    }
+    p {
+      font-size: $sm_sub;
+    }
+    p.hachidori_words {
+      color: rgb(163, 163, 163);
+    }
+    p.home_happy_definition_author {
+      text-align: end;
+    }
+    span.hachidori_words {
+      color: #3269f5;
+      font-size: $sm_main;
+    }
+    h2 {
+      font-size: $sm_main;
+    }
+    h2.hachidori {
+      color: #3269f5;
+      font-weight: bold;
+    }
+    .home_happy_definition_section {
+      border-top: 1px solid #ffc800;
+      span {
+        display: block;
+        width: 30px;
+        background-color: #ffc800;
+        font-size: $sm_sub;
+        color: white;
+        text-align: center;
+        border-radius: 0px 0px 10px 0px;
+      }
+      p {
+        padding: 20px;
+      }
+    }
+    a.registration_link {
+      display: block;
+      text-align: center;
+      background-color: #ffd814;
+      box-shadow: 0 2px 5px 0 rgba(213, 217, 217, 0.5);
+      border-radius: 4px;
+      padding: 5px 5px;
+      color: white;
+    }
+  }
+}

@@ -52,3 +52,34 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# devise
+gem 'devise'
+
+# 日本語化
+gem 'rails-i18n', '~> 6.0'
+
+# デバック用
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end
+gem 'pry-rails'
+
+# ActiveStorage
+gem 'mini_magick'
+gem 'image_processing', '~> 1.2'
+
+ # RailsでjQueryを使えるようにするgem
+ gem 'jquery-rails'
+
+# .envを使用する
+gem 'dotenv-rails'
+
+# S3を使用するために必要なGem
+gem "aws-sdk-s3", require: false
+
+# ユニコーンを使用するため
+group :production do
+  gem 'unicorn', '5.4.1'
+end

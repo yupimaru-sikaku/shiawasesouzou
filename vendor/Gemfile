@@ -1,0 +1,143 @@
+<nav class="footer">
+
+  <div class="footer_logo">
+    <%= image_tag "logo.png", alt: "ロゴ画像" %>
+  </div>
+
+  <div class="footer_menu_1">
+    <p>ABOUT</p>
+    <%= link_to "協会について", "/" %>
+    <%= link_to "幸せの概念とは", "/" %>
+    <%= link_to "幸せの鳥ハチドリ運動", "/" %>
+  </div>
+
+  <div class="footer_menu_2">
+    <p>SERVICE</p>
+    <a href="/">入会について</a>
+    <a href="/">伝道師の役割</a>
+  </div>
+
+  <div class="module-spacer--medium"></div>
+
+  <div class="footer_copyright">
+    <p>Copyright ©2021 人々の幸せ創造協会</p>
+  </div>
+
+</nav>
+
+
+
+
+
+
+@import "../font";
+
+.footer {
+  background-color: #b4c9ff;
+  background-image: linear-gradient(
+    45deg,
+    #9db8ff 25%,
+    #9db8ff 25%,
+    transparent 25%,
+    transparent 75%,
+    #9db8ff 75%,
+    #9db8ff 75%
+  );
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  border-top: 5px solid #ffc800;
+  padding: 0px 205px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  display: grid;
+  grid-template:
+    " logo logo "
+    " .... .... " 30px
+    " menu_1 menu_2 "
+    " .... .... " 30px
+    " copyright copyright "
+    " .... .... " 30px;
+  .footer_logo {
+    grid-area: logo;
+    font-size: 40px;
+    border-bottom: 0.5px solid #ababab;
+    padding: 30px 0px;
+  }
+
+  .footer_menu_1 {
+    grid-area: menu_1;
+    font-size: $pc_subsub;
+    p {
+      padding: 0px 0px 10px 0px;
+    }
+    a {
+      display: block;
+    }
+  }
+  .footer_menu_2 {
+    grid-area: menu_2;
+    padding: 0px 25px;
+    font-size: $pc_subsub;
+    p {
+      padding: 0px 0px 10px 0px;
+    }
+    a {
+      display: block;
+    }
+  }
+
+  .footer_copyright {
+    grid-area: copyright;
+    color: white;
+    text-align: right;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .footer {
+    padding: 0px 20px;
+    display: grid;
+    grid-template:
+      " .... .... " 15px
+      " menu_1 menu_2 "
+      " .... .... " 15px
+      " logo logo "
+      " .... .... " 15px
+      " copyright copyright "
+      " .... .... " 15px
+      /150px auto;
+    .footer_logo {
+      grid-area: logo;
+      font-size: 32px;
+      border-bottom: 0.5px solid #ababab;
+      padding: 5px 0px;
+    }
+
+    .footer_menu_1 {
+      grid-area: menu_1;
+      font-size: $sm_subsub;
+      p {
+        padding: 0px 0px 10px 0px;
+      }
+      a {
+        display: block;
+      }
+    }
+    .footer_menu_2 {
+      grid-area: menu_2;
+      padding: 0px 10px;
+      font-size: $sm_subsub;
+      p {
+        padding: 0px 0px 10px 0px;
+      }
+      a {
+        display: block;
+      }
+    }
+
+    .footer_copyright {
+      font-size: $sm_subsub;
+      grid-area: copyright;
+      text-align: right;
+      color: black;
+    }
+  }
+}
