@@ -109,8 +109,8 @@
     width: 100vw;
     height: 100vh;
     z-index: 100;
-    -webkit-animation: tooltipShow 0.1s linear 0s;
-            animation: tooltipShow 0.1s linear 0s;
+    -webkit-animation: tooltipShow 0.2s linear 0s;
+            animation: tooltipShow 0.2s linear 0s;
   }
   nav.globalMenuSp ul {
     margin: 0 auto;
