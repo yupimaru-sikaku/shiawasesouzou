@@ -1,6 +1,7 @@
 @import "../font";
 
 @media screen and (max-width: 750px) {
+  // ぐわってででくる
   .header_circle {
     background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
     width: 1px;
@@ -24,6 +25,7 @@
     padding: 8px 0px;
     display: flex;
     align-items: center;
+    padding: 10px;
 
     img {
       width: 230px;
