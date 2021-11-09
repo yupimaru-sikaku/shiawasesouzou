@@ -6,9 +6,9 @@
 require("@rails/ujs").start()
 require("@rails/activestorage").start()
 require("channels")
-require('jquery')
+// require('jquery')
 // カルーセル用
-require('slick.js')
+// require('slick.js')
 
 $(function(){
   setTimeout("$('.alert').fadeOut('slow')", 2000);
