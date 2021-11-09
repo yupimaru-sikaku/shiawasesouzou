@@ -1,24 +1,6 @@
 @import "../font";
 
 @media screen and (max-width: 750px) {
-  // ぐわってででくる
-  .header_circle {
-    background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
-    width: 1px;
-    height: 1px;
-    transition: all 0.5s;
-    position: absolute;
-    top: 50vh;
-    right: 50vw;
-    transform: scale(0);
-    border-radius: 50%;
-  }
-  .header_circle.active {
-    transform: scale(1000);
-    display: block;
-    border-radius: 50%;
-  }
-
   .header_sm {
     width: 100vw;
     height: 60px;
@@ -36,7 +18,7 @@
   /*　ハンバーガーボタン　*/
   .hamburger {
     display: block;
-    position: absolute;
+    position: fixed;
     top: 15px;
     right: 15px;
     cursor: pointer;
@@ -65,7 +47,6 @@
   .hamburger.active {
     width: 40px;
     height: 40px;
-    z-index: 200;
   }
   .hamburger.active p {
     display: none;
@@ -91,6 +72,7 @@
   }
 
   nav.globalMenuSp {
+    background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
     display: none;
     position: absolute;
     padding-top: 56px;
@@ -106,7 +88,6 @@
     &.active {
       opacity: 100;
       display: block;
-      z-index: 100;
     }
   }
 
