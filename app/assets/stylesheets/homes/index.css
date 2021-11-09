@@ -12,14 +12,14 @@
 }
 
 .home_content .home_concept h3.concept_title_2 {
-  font-size: 18px;
+  font-size: 20px;
   color: #3269f5;
   grid-area: concept_title_2;
   font-weight: bold;
 }
 
 .home_content .home_concept p {
-  font-size: 14px;
+  font-size: 16px;
   grid-area: concept_words_1;
 }
 
@@ -40,7 +40,7 @@
 }
 
 .home_content .home_happy_definition p {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .home_content .home_happy_definition p.hachidori_words {
@@ -73,7 +73,7 @@
   display: block;
   width: 30px;
   background-color: #ffc800;
-  font-size: 14px;
+  font-size: 16px;
   color: white;
   text-align: center;
   border-radius: 0px 0px 10px 0px;
