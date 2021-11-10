@@ -1,24 +1,12 @@
-// $(function () {
-//   $(".hamburger").click(function () {
-//     $(this).toggleClass("active");
-
-//     if ($(this).hasClass("active")) {
-//       $(".globalMenuSp").addClass("active");
-//     } else {
-//       $(".globalMenuSp").removeClass("active");
-//     }
-//   });
-// });
-
 const hamburger = document.querySelector(".hamburger");
 const globalMenuSp = document.querySelector(".globalMenuSp");
-const header_circle = document.querySelector(".header_circle");
+const circle_bg = document.querySelector(".circle_bg");
 
 hamburger.addEventListener("click", (e) => {
   e.preventDefault();
   globalMenuSp.classList.toggle("active");
   hamburger.classList.toggle("active");
-  header_circle.classList.toggle("active");
+  circle_bg.classList.toggle("active");
 });
 
 // console.log(123);

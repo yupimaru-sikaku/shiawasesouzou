@@ -1,0 +1,155 @@
+<%##レスポンス（PC）%>
+<%##レスポンス（スマホ）%>
+<div class="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
+  <p>menu</p>
+</div>
+
+<nav class="header_sm">
+  <a href="/"><%= image_tag "logo.png", alt: "ロゴ画像" %></a>
+</nav>
+
+<nav class="globalMenuSp">
+    <ul>
+        <li><i class="fas fa-sign-in-alt"></i></i><%= link_to "幸せのコンセプト", "/" %></li>
+        <li><i class="fas fa-gifts"></i><%= link_to "入会案内", admission_guidance_homes_path %></li>
+        <li><i class="fas fa-gifts"></i><%= link_to "平等学とは", "/" %></li>
+        <li><i class="fas fa-gifts"></i><%= link_to "伝道師の役割", "/" %></li>
+        <li><i class="fas fa-headset"></i><%= link_to "お問い合わせ", new_contact_path %></li>
+    </ul>
+</nav>
+<%= javascript_pack_tag "shared/header" %>
+
+
+
+
+@import "../font";
+@keyframes clipPath {
+  0% {
+    clip-path: circle(0 at 100% 0%);
+  }
+  100% {
+    clip-path: circle(100% at 50% 50%);
+  }
+}
+@media screen and (max-width: 750px) {
+  .header_sm {
+    width: 100vw;
+    height: 60px;
+    padding: 8px 0px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+
+    img {
+      width: 230px;
+      display: block;
+    }
+  }
+
+  /*　ハンバーガーボタン　*/
+  .hamburger {
+    display: block;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    text-align: center;
+    z-index: 200;
+  }
+  .hamburger span {
+    display: none;
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    border-radius: 20%;
+    left: 6px;
+    background: #555;
+  }
+  .hamburger p {
+    font-size: $sm_subsub;
+    background-color: #3269f5;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  /* ナビ開いてる時のボタン */
+  .hamburger.active {
+    width: 40px;
+    height: 40px;
+  }
+  .hamburger.active p {
+    display: none;
+  }
+  .hamburger.active span:nth-child(1) {
+    display: block;
+    top: 16px;
+    left: 6px;
+    background: #fff;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  .hamburger.active span:nth-child(2),
+  .hamburger.active span:nth-child(3) {
+    display: block;
+    top: 16px;
+    background: #fff;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  nav.globalMenuSp {
+    background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+    padding-top: 56px;
+    color: #fff;
+    text-align: center;
+    display: none;
+    /* このクラスを、jQueryで付与・削除する */
+    &.active {
+      display: block;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 100;
+      animation: clipPath 0.5s cubic-bezier(0.22, 0.6, 0.35, 1) 0s 1 forwards;
+    }
+  }
+
+  nav.globalMenuSp ul {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+  }
+
+  nav.globalMenuSp ul li {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    transition: 0.4s all;
+  }
+  nav.globalMenuSp ul li:last-child {
+    padding-bottom: 0;
+  }
+  nav.globalMenuSp ul li:hover {
+    background: rgb(153, 171, 233);
+  }
+
+  nav.globalMenuSp ul li a {
+    display: inline-block;
+    color: #fff;
+    padding: 1em 0;
+    text-decoration: none;
+    margin-left: 10px;
+    width: 150px;
+    letter-spacing: 2px;
+  }
+}

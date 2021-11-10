@@ -8,6 +8,33 @@
   }
 }
 @media screen and (max-width: 750px) {
+  .circle_bg {
+    content: "";
+    width: 2400px;
+    height: 2400px;
+    margin-right: -1200px;
+    margin-top: -1200px;
+    top: -40px;
+    right: -40px;
+    // display: block;
+    position: fixed;
+    background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: scale(0.02);
+    transform: scale(0.02);
+  }
+  .circle_bg.active {
+    display: block;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
+  }
   .header_sm {
     width: 100vw;
     height: 60px;
@@ -79,7 +106,6 @@
   }
 
   nav.globalMenuSp {
-    background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
     padding-top: 56px;
     color: #fff;
     text-align: center;
@@ -93,7 +119,6 @@
       width: 100vw;
       height: 100vh;
       z-index: 100;
-      animation: clipPath 0.5s cubic-bezier(0.22, 0.6, 0.35, 1) 0s 1 forwards;
     }
   }
 
