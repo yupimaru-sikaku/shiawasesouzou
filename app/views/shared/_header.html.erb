@@ -11,7 +11,7 @@
   <a href="/"><%= image_tag "logo.png", alt: "ロゴ画像" %></a>
 </nav>
 
-<nav class="globalMenuSp">
+<nav class="globalMenuSp wrap">
     <ul>
         <li><i class="fas fa-sign-in-alt"></i></i><%= link_to "幸せのコンセプト", "/" %></li>
         <li><i class="fas fa-gifts"></i><%= link_to "入会案内", admission_guidance_homes_path %></li>
@@ -21,6 +21,6 @@
     </ul>
 </nav>
 
-<div class="circle_bg"></div>
+<div class="circle_bg wrap"></div>
 
 <%= javascript_pack_tag "shared/header" %>
