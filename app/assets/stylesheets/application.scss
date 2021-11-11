@@ -19,6 +19,7 @@
 @import "./font";
 //  GoogleFont導入
 @import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100&display=swap");
+@import "./loading-bar.scss";
 // カルーセル
 // @import "slick-theme";
 // @import "slick";
@@ -28,4 +29,8 @@
     "ヒラギノ角ゴ ProN W3", "ヒラギノ角ゴ Pro W3", "メイリオ", Meiryo,
     sans-serif;
   letter-spacing: 2px;
+}
+
+.pace-running .wrap {
+  display: none;
 }
